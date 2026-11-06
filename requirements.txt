@@ -1,0 +1,6 @@
+# Python 3.11; verified versions are also recorded in requirements-lock.txt.
+torch==2.8.0
+transformers==4.57.1
+peft==0.17.1
+accelerate==1.10.1
+PyYAML==6.0.3

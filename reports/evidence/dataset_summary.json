@@ -1,0 +1,65 @@
+{
+  "source_rows": 2385,
+  "categories": {
+    "HR": 110,
+    "DESIGNER": 107,
+    "INFORMATION-TECHNOLOGY": 120,
+    "TEACHER": 102,
+    "ADVOCATE": 117,
+    "BUSINESS-DEVELOPMENT": 120,
+    "HEALTHCARE": 115,
+    "FITNESS": 117,
+    "AGRICULTURE": 63,
+    "BPO": 22,
+    "SALES": 116,
+    "CONSULTANT": 115,
+    "DIGITAL-MEDIA": 96,
+    "AUTOMOBILE": 36,
+    "CHEF": 118,
+    "FINANCE": 118,
+    "ENGINEERING": 118,
+    "ACCOUNTANT": 118,
+    "CONSTRUCTION": 112,
+    "PUBLIC-RELATIONS": 111,
+    "BANKING": 115,
+    "ARTS": 103,
+    "AVIATION": 116
+  },
+  "unique_job_descriptions": 23,
+  "pilot_rows": 120,
+  "pilot_unique_resumes": 120,
+  "pilot_unique_jobs": 1,
+  "duplicate_pairs_removed": 0,
+  "invalid_tech_rows_removed": 0,
+  "splits": {
+    "train": 96,
+    "validation": 12,
+    "test": 12
+  },
+  "seed": 42,
+  "resume_overlap_between_splits": false,
+  "limitations": [
+    "Pilot only; the IT posting is a senior infrastructure-management role.",
+    "AI labels and generated skill-list targets are not human gold labels.",
+    "Identical jobs cross splits; these splits do not test unseen-job generalization.",
+    "Exact normalized-text deduplication only; near-duplicate review remains.",
+    "No verified recent-graduate training or test set exists yet."
+  ],
+  "linkedin": {
+    "source_file": "data/raw/linkedin_job_postings/postings.csv",
+    "rows": 123849,
+    "missing_text_rows": 7,
+    "duplicate_title_description_rows": 13231,
+    "experience_levels": {
+      "unknown": 29409,
+      "Entry level": 36708,
+      "Mid-Senior level": 41489,
+      "Associate": 9826,
+      "Director": 3746,
+      "Internship": 1449,
+      "Executive": 1222
+    },
+    "unreviewed_entry_tech_candidates": 1299,
+    "note": "Heuristic candidate pool, not confirmed eligibility or labeled test pairs."
+  }
+}

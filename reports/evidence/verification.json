@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-06",
+  "dependency_check": "pip check: No broken requirements found",
+  "unit_tests": {
+    "command": ".venv/bin/python -m unittest discover -s tests -v",
+    "passed": 3,
+    "failed": 0,
+    "checks": [
+      "resume groups do not cross pilot splits",
+      "truncation retains both input fields",
+      "prompt and padding loss masking; EOS supervised"
+    ]
+  },
+  "base_inference_executed": true,
+  "adapter_training_steps": 2,
+  "fresh_process_adapter_inference_executed": true,
+  "base_valid_schema": false,
+  "adapter_valid_schema": false,
+  "performance_evaluated": false,
+  "colab_notebook_executed": false
+}

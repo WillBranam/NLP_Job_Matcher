@@ -1,0 +1,20 @@
+{
+  "model": {
+    "repo_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "local_dir": "models/base/Qwen2.5-1.5B-Instruct"
+  },
+  "resume_dataset": {
+    "repo_id": "mfaizan29/job_resume_fit",
+    "revision": "4090a3f6c4aff1fae32429d7afa2feaafb399f5c",
+    "local_dir": "data/raw/job_resume_fit"
+  },
+  "job_dataset": {
+    "source": "https://www.kaggle.com/datasets/arshkon/linkedin-job-postings/versions/13",
+    "download_url": "https://www.kaggle.com/api/v1/datasets/download/arshkon/linkedin-job-postings?datasetVersionNumber=13",
+    "local_dir": "data/raw/linkedin_job_postings"
+  },
+  "seed": 42,
+  "tech_categories": ["INFORMATION-TECHNOLOGY"],
+  "split_fractions": {"train": 0.8, "validation": 0.1, "test": 0.1}
+}

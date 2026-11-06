@@ -1,0 +1,17 @@
+# Infrastructure check on proxy data; not an accuracy experiment.
+data: data/processed/pilot/train.jsonl
+output_dir: models/adapters/smoke
+evidence_dir: outputs/training/smoke
+smoke: true
+max_samples: 4
+max_steps: 2
+epochs: 1
+max_length: 1024
+learning_rate: 0.0002
+batch_size: 1
+gradient_accumulation_steps: 1
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+target_modules: [q_proj, v_proj]
+seed: 42
