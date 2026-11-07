@@ -8,6 +8,19 @@ Read [the fine-tuning plan](reports/FineTuningPlan.md), [the midterm checklist](
 
 Local setup verification completed: base inference, two LoRA training steps, adapter save/reload and inference, and three pipeline tests. Both inference responses failed strict JSON validation; their raw outputs and the training evidence are preserved in [reports/evidence](reports/evidence). No matching-quality evaluation has been run.
 
+The [executed Mac notebook](notebooks/01_midterm_mac_executed.ipynb) contains actual outputs from all 12 code cells, run on Apple MPS. Open the [HTML copy](notebooks/01_midterm_mac_executed.html) to read outputs and take screenshots without starting a kernel. The [brief report and screenshot guide](reports/MidtermScreenshotGuide.txt) maps screenshots to numbered sections. This additional notebook run has separate evidence in outputs/notebook_run and a separate adapter in models/adapters/notebook_smoke.
+
+The original notebook filename, notebooks/01_colab_smoke.ipynb, now contains the updated Mac/CUDA/CPU template. Choose auto, mps, cuda, or cpu in section 3. Existing pinned dependencies and downloads are reused; the notebook captures subprocess output instead of relying on terminal-only logs. No code cell needs CUDA specifically. Colab/CUDA execution remains unverified.
+
+To execute and export a fresh copy from the repository root:
+
+~~~bash
+python -m pip install --cache-dir .cache/pip -r requirements-notebook.txt
+python scripts/execute_notebook.py
+~~~
+
+The runner stops on errors, saves real partial outputs on failure, and verifies that every code cell has an execution count and saved output. On success it exports the executed notebook, HTML, and notebooks/midterm_submission.zip with source, configuration, logs, adapter, and notebook outputs. The ZIP excludes the base-model weights and raw datasets.
+
 ## Setup
 
 Use Python 3.11. The repository already has a local `.venv` on the setup machine.
@@ -44,7 +57,7 @@ data/processed/reviewed/ Future verified recent-graduate train/validation/test p
 examples/                Clearly marked synthetic demonstration input
 models/base/             Original Qwen weights and tokenizer
 models/adapters/         Saved LoRA adapters
-notebooks/               Colab walkthrough
+notebooks/               Mac/CUDA/CPU notebook, executed outputs, HTML and submission ZIP
 outputs/downloads/       Download manifests and hashes
 outputs/data/            Dataset inspection results
 outputs/training/        Configuration, loss logs, adapter provenance

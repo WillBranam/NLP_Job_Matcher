@@ -7,6 +7,12 @@ from .prompts import messages
 
 def select_device(requested="auto"):
     if requested != "auto":
+        if requested not in ("mps", "cuda", "cpu"):
+            raise ValueError("Choose auto, mps, cuda, or cpu")
+        if requested == "mps" and not torch.backends.mps.is_available():
+            raise RuntimeError("MPS is unavailable in this Python session; use an Apple Silicon Mac kernel or choose cpu.")
+        if requested == "cuda" and not torch.cuda.is_available():
+            raise RuntimeError("CUDA is unavailable; choose mps on Apple Silicon, a CUDA GPU runtime, or cpu.")
         return requested
     if torch.cuda.is_available():
         return "cuda"
@@ -22,7 +28,7 @@ def load_model(path, device="auto"):
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token
     model = AutoModelForCausalLM.from_pretrained(
-        path, local_files_only=True, torch_dtype=dtype, attn_implementation="eager")
+        path, local_files_only=True, dtype=dtype, attn_implementation="eager")
     model.to(device)
     return model, tokenizer, device
 

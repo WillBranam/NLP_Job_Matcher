@@ -24,6 +24,8 @@ Evidence: `outputs/downloads/all_manifest.json`, `outputs/data/dataset_summary.j
 - [x] Save the adapter and tokenizer.
 - [x] Reload the adapter in a fresh process and retain inference output.
 - [x] Verify split separation and that the training loss excludes prompt/padding tokens.
+- [x] Execute all 12 code cells of the updated Mac/MPS notebook and save real outputs, with no error outputs.
+- [x] Export an HTML reading copy, source/evidence ZIP, and numbered screenshot guide.
 
 Commands are in `README.md`. Both inference runs generated text but failed strict JSON/schema validation (Markdown fences and capitalized `Eligible`). Record this limitation. Report-ready copies of the setup evidence are in `reports/evidence/`; raw datasets, weights, and working outputs remain excluded from Git.
 

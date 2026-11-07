@@ -37,7 +37,9 @@ The pilot targets retain source AI scores and skill lists. Missing skills are de
 
 ## Execution evidence
 
-Local verification completed on November 6, 2026 using this Mac's Apple MPS device and Python 3.11. The installed versions include PyTorch 2.8.0, Transformers 4.57.1, PEFT 0.17.1, and Accelerate 1.10.1. Dependency checks passed. The Colab walkthrough is provided but has not been executed.
+Local verification completed on November 6, 2026 using this Mac's Apple MPS device and Python 3.11. The installed versions include PyTorch 2.8.0, Transformers 4.57.1, PEFT 0.17.1, and Accelerate 1.10.1. Dependency checks passed. The updated Mac/CUDA/CPU notebook was also executed from start to finish on MPS: all 12 code cells have real saved outputs and no error outputs. Colab/CUDA execution remains unverified.
+
+The table below records the original standalone setup run. The subsequently executed notebook has its own current timings and logs in outputs/notebook_run, plus a separate models/adapters/notebook_smoke adapter. Use the actual notebook tables when captioning screenshots from that run; do not mix their timings with this original run.
 
 | Check | Actual result | Saved evidence |
 | --- | --- | --- |

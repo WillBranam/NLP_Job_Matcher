@@ -1,0 +1,33 @@
+BRIEF REPORT: WHAT TO WRITE
+
+I am adapting Qwen2.5-1.5B-Instruct with LoRA for the specific task of resume-job
+matching in the technology-employment domain. I downloaded the Resume-Job Fit
+dataset (2,385 pairs) and LinkedIn Job Postings (123,849 postings), inspected the
+data, and saved a 96/12/12 training/validation/testing pilot split. The executed
+notebook demonstrates model inference, a two-step LoRA training run, adapter
+saving and fresh-process reload. It also checks split separation and loss masking.
+
+This is an implementation demonstration, not an accuracy evaluation. The IT pilot
+uses one senior infrastructure-manager job and AI-derived labels, so it is not a
+validated entry-level benchmark. The inference sections retain raw responses and
+report whether they meet the requested JSON schema. Final data review, ranking,
+and performance comparisons remain future work. Keyword overlap will be one
+supporting measure: matching three of four required skills gives 75% coverage,
+which is distinct from the model's overall qualification score.
+
+WHERE TO TAKE SCREENSHOTS
+
+A (optional): Section 3. Capture selected device=mps and the available-device table.
+B: Section 4. Capture downloaded/reused asset names, file sizes and hash checks.
+   Existing files are reused and verified; do not call this a fresh download.
+C: Sections 5-6. Capture dataset counts and the 96/12/12 split table with PASS.
+D: Section 8. Capture the synthetic input and actual base-model response.
+E: Section 9. Capture the completed-step/loss table and trainable-parameter table.
+F: Section 10. Capture the fresh-process adapter response and reload SUCCESS line.
+Optional final summary: Section 12. Capture the milestone status table.
+
+Use the executed notebook or HTML copy so screenshots include actual saved output.
+Expand long outputs as needed. Include short captions with the section and purpose.
+The notebook's sections are numbered to match this guide, independent of editor
+cell numbering. Submit the executed .ipynb and brief report; attach screenshots
+and source/evidence ZIP if the assignment accepts or requests supporting files.

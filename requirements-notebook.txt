@@ -1,0 +1,6 @@
+# Additional tools for running and exporting notebooks with saved outputs.
+-r requirements.txt
+nbformat>=5.10,<6
+nbclient>=0.10,<0.11
+ipykernel>=6.29,<8
+nbconvert>=7.16,<8
